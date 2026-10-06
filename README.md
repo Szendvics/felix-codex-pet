@@ -7,13 +7,20 @@ The classic desktop cat, with his original animations.
 ### Codex app
 
 1. Run the [app download command](#app-download) for your system.
-2. Open **Settings → Pets**, click **Refresh**, and select **Felix**.
-3. Enter `/pet` to show him.
+2. Open **Settings → Pets** (called **Mini & Pets** in newer versions), click
+   **Refresh**, and select **Felix**.
+3. Click **Show mini**, or enter `/pet`, to show him.
 
 For the Windows app, use Windows PowerShell, even if you also use WSL.
 
-For a manual install, [download the ZIP](https://github.com/Szendvics/felix-codex-pet/releases/latest/download/felix-codex-pet.zip),
-extract it, and copy the **felix** folder to **Settings → Pets → Open folder**.
+**Windows app with WSL:** If Felix is missing, choose **Windows native** in
+**Settings → General**, restart the app, then refresh the pet list. Select Felix
+before switching back to WSL and restarting. Tested with app version 26.930,
+which synced Felix to the account and kept him available in WSL mode.
+
+**No animation:** Codex shows only the first frame when reduced motion is
+enabled. On Windows, turn on **Settings → Accessibility → Visual effects →
+Animation effects**, then restart the app. This setting affects other apps too.
 
 ### Codex CLI
 
