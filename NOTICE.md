@@ -28,7 +28,3 @@ to that artwork, and is not endorsed by its owners or OpenAI.
 [OpenAI's hatch-pet tools](https://github.com/openai/skills/tree/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/hatch-pet),
 commit `49f948faa9258a0c61caceaf225e179651397431`.
 Its Apache License 2.0 is preserved in `tools/LICENSE.openai-skills.txt`.
-
-## Adaptation
-
-Codex packaging and build script: Marcell Varga <a.marcell.varga@gmail.com>.

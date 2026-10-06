@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 import subprocess
 import sys
+from zipfile import ZIP_DEFLATED, ZipFile, ZipInfo
 
 from PIL import Image, ImageDraw
 
@@ -118,7 +119,29 @@ def build():
         preview.append(board)
     preview[0].save(ROOT / "preview.gif", save_all=True, append_images=preview[1:],
                     duration=40, loop=0, optimize=False)
+
+    dist = ROOT / "dist"
+    dist.mkdir(exist_ok=True)
+    archive_path = dist / "felix-codex-pet.zip"
+    files = {"felix/pet.json": package / "pet.json",
+             "felix/spritesheet.webp": package / "spritesheet.webp",
+             "felix/NOTICE.md": ROOT / "NOTICE.md"}
+    with ZipFile(archive_path, "w") as archive:
+        for name, source in files.items():
+            info = ZipInfo(name)  # Fixed timestamp makes repeated builds identical.
+            info.compress_type = ZIP_DEFLATED
+            info.external_attr = 0o100644 << 16
+            archive.writestr(info, source.read_bytes())
+    with ZipFile(archive_path) as archive:
+        assert archive.testzip() is None
+        assert set(archive.namelist()) == set(files)
+        for name, source in files.items():
+            assert archive.read(name) == source.read_bytes(), name
+    checksum = hashlib.sha256(archive_path.read_bytes()).hexdigest()
+    archive_path.with_suffix(".zip.sha256").write_text(
+        f"{checksum}  {archive_path.name}\n", encoding="ascii")
     print(f"Built and validated {package}")
+    print(f"Packaged and checked {archive_path}")
 
 
 if __name__ == "__main__":

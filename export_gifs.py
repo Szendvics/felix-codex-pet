@@ -15,35 +15,35 @@ BACKGROUND = "#aeb4bf"
 # ID, columns, rows, used cells, description. Read cells left-to-right, top-to-bottom.
 # The archive's captions/counts are unreliable; these grids were checked visually.
 SHEETS = [
-    (301, 1, 4, 4, "Talajra érkezés, felállás"),
-    (302, 2, 6, 12, "Séta balra"),
-    (303, 2, 6, 12, "Séta jobbra"),
-    (304, 2, 1, 2, "Fordulás szemből jobbra"),
-    (305, 2, 1, 2, "Fordulás szemből balra"),
-    (306, 2, 6, 12, "Leülés, nézelődés, felállás"),
-    (307, 2, 2, 4, "Oldalra néző ülő pózok"),
-    (308, 4, 2, 8, "Kikukucskálás alulról"),
-    (309, 4, 2, 8, "Kikukucskálás oldalról"),
-    (310, 1, 5, 5, "Eltűnés az alsó szélen"),
-    (311, 6, 4, 24, "Evés a tálból"),
-    (312, 2, 17, 34, "Hal, A változat — külön kellék"),
-    (313, 2, 11, 22, "Hal, B változat — külön kellék"),
-    (314, 2, 4, 8, "Hal, C változat — külön kellék"),
-    (315, 6, 4, 24, "Macska az akváriummal"),
-    (316, 4, 7, 26, "Bebújás a macskaajtón"),
-    (317, 4, 1, 4, "Apró fej / szemek a peremnél — részlet"),
-    (318, 4, 6, 23, "Kibújás a macskaajtón"),
-    (319, 3, 3, 9, "Felugrás, mancsnyomok az üvegen"),
-    (320, 4, 3, 12, "Leülés, fejfordítás"),
-    (321, 4, 8, 32, "Lelapulás, fülek hátra, farokmozgás"),
-    (322, 2, 6, 12, "Hátat fordít, leül, mozgatja a farkát"),
-    (323, 3, 4, 12, "Tévénézés"),
-    (324, 4, 5, 20, "Mosakodás, mancsnyalogatás"),
-    (325, 4, 5, 18, "Szemből ülés, mancs felemelése"),
-    (326, 4, 8, 32, "Mozgó pontok — az archívumban nincs teljes macska"),
-    (327, 3, 5, 13, "Mozgó pontok — az archívumban nincs teljes macska"),
-    (328, 7, 2, 14, "Mozgó pontok — az archívumban nincs teljes macska"),
-    (1200, 1, 1, 1, "Nyitókép / logó — állókép"),
+    (301, 1, 4, 4, "Landing and standing up"),
+    (302, 2, 6, 12, "Walking left"),
+    (303, 2, 6, 12, "Walking right"),
+    (304, 2, 1, 2, "Turning from front to right"),
+    (305, 2, 1, 2, "Turning from front to left"),
+    (306, 2, 6, 12, "Sitting down, looking around, standing up"),
+    (307, 2, 2, 4, "Seated poses facing sideways"),
+    (308, 4, 2, 8, "Peeking up from below"),
+    (309, 4, 2, 8, "Peeking in from the side"),
+    (310, 1, 5, 5, "Disappearing below the bottom edge"),
+    (311, 6, 4, 24, "Eating from the bowl"),
+    (312, 2, 17, 34, "Fish, variant A (separate prop)"),
+    (313, 2, 11, 22, "Fish, variant B (separate prop)"),
+    (314, 2, 4, 8, "Fish, variant C (separate prop)"),
+    (315, 6, 4, 24, "Cat with a fish bowl"),
+    (316, 4, 7, 26, "Going through the cat flap"),
+    (317, 4, 1, 4, "Small head and eyes at the edge (partial sprite)"),
+    (318, 4, 6, 23, "Coming out of the cat flap"),
+    (319, 3, 3, 9, "Jumping and leaving paw prints on the glass"),
+    (320, 4, 3, 12, "Sitting down and turning the head"),
+    (321, 4, 8, 32, "Crouching with ears back and moving the tail"),
+    (322, 2, 6, 12, "Turning away, sitting down, moving the tail"),
+    (323, 3, 4, 12, "Watching TV"),
+    (324, 4, 5, 20, "Grooming and licking a paw"),
+    (325, 4, 5, 18, "Sitting facing forward and raising a paw"),
+    (326, 4, 8, 32, "Moving dots (no complete cat in the archive)"),
+    (327, 3, 5, 13, "Moving dots (no complete cat in the archive)"),
+    (328, 7, 2, 14, "Moving dots (no complete cat in the archive)"),
+    (1200, 1, 1, 1, "Splash screen and logo (still image)"),
 ]
 
 
@@ -88,10 +88,10 @@ def export():
     readme = OUT / "README.md"
     marker = "<!-- generated gallery -->"
     guide = readme.read_text().split(marker)[0]
-    table = [marker, "", "| ID · képsor | Képkockák | GIF |",
+    table = [marker, "", "| ID · sequence | Frames | GIF |",
              "| --- | --- | --- |"]
     for ident, _, _, count, title in SHEETS:
-        table.append(f"| **{ident}** · {title} | [{count} db, 0–{count-1}](fig_{ident}.frames.png) "
+        table.append(f"| **{ident}** · {title} | [{count} total, 0–{count-1}](fig_{ident}.frames.png) "
                      f"| ![{ident} — {title}](fig_{ident}.gif) |")
     readme.write_text(guide + "\n".join(table) + "\n")
     print(f"Exported and checked {len(SHEETS)} GIFs and numbered frame sheets in {OUT}")
