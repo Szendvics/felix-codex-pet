@@ -2,6 +2,31 @@
 
 The classic desktop cat, with his original animations.
 
+## Original Felix artwork
+
+![Original Felix splash screen and logo (1200)](animations/fig_1200.gif)
+
+[Sources and attribution](NOTICE.md)
+
+## Animations
+
+![Felix animation preview](preview.gif)
+
+| App state | Felix's action |
+| --- | --- |
+| Idle / Needs input | Sitting, looking at you, moving his tail (325) |
+| Drag right / left | Walking (303 / 302) |
+| Wave | Raising a paw (325) |
+| Jump | Leaving paw prints on the glass (319) |
+| Failed | Sitting with his back turned, moving his tail (322) |
+| Working | Eating from the bowl (311) |
+| Review | Watching the fish bowl (315) |
+
+[GIF selector](animations/README.md): all 29 sequences and numbered frames.
+
+Codex controls when animations play. Idle uses the Needs input poses at a different
+speed. Working repeats the same eating loop on every turn.
+
 ## Install
 
 ### Codex app
@@ -78,25 +103,6 @@ Invoke-WebRequest -Uri $url -OutFile felix-codex-cli-pet.zip -UseBasicParsing -E
 Expand-Archive -LiteralPath .\felix-codex-cli-pet.zip -DestinationPath (Join-Path $petHome 'pets') -Force
 ```
 
-## Animations
-
-![Felix animation preview](preview.gif)
-
-| App state | Felix's action |
-| --- | --- |
-| Idle / Needs input | Sitting, looking at you, moving his tail (325) |
-| Drag right / left | Walking (303 / 302) |
-| Wave | Raising a paw (325) |
-| Jump | Leaving paw prints on the glass (319) |
-| Failed | Sitting with his back turned, moving his tail (322) |
-| Working | Eating from the bowl (311) |
-| Review | Watching the fish bowl (315) |
-
-[GIF selector](animations/README.md): all 29 sequences and numbered frames.
-
-Codex controls when animations play. Idle uses the Needs input poses at a different
-speed. Working repeats the same eating loop on every turn.
-
 ## Rebuild and check
 
 ```sh
@@ -109,9 +115,3 @@ Creates both ZIPs in `dist/`, their SHA-256 checksums, and the previews. Checks 
 app atlas, CLI cropping, and Working loop timing.
 Edit `ROWS` in [build.py](build.py) to change the frames.
 On Windows, use `python` to create the venv and `.venv\Scripts\python.exe` after that.
-
-## Original Felix artwork
-
-![Original Felix splash screen and logo (1200)](animations/fig_1200.gif)
-
-[Sources and attribution](NOTICE.md)
