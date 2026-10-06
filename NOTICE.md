@@ -8,7 +8,7 @@ at commit `912cb839d4806dcd0f5b95f9317b6cf414fbfd65`.
 The archive credits codehammer.com and adtoolsinc.com for the original Screen
 Mates artwork. Its maintainer is not the original creator.
 
-Frames are selected, resized, and retimed for Codex. No Felix.exe binary is
+Frames are selected, resized, cropped, and retimed for Codex. No Felix.exe binary is
 included. Source URLs and SHA-256 hashes are in `source/sources.json`.
 Gallery previews use 120 ms per source frame.
 

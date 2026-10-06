@@ -1,7 +1,7 @@
 {
-  "id": "felix",
-  "displayName": "Felix",
-  "description": "The classic desktop cat, with his original animations.",
+  "id": "felix-cli",
+  "displayName": "Felix CLI",
+  "description": "Larger Felix for the Codex CLI.",
   "spritesheetPath": "spritesheet.webp",
   "animations": {
     "running": {
@@ -51,5 +51,11 @@
       "fps": 50.0,
       "loop": true
     }
+  },
+  "frame": {
+    "width": 192,
+    "height": 144,
+    "columns": 8,
+    "rows": 13
   }
 }

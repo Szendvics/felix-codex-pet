@@ -5,6 +5,7 @@ import bisect
 import hashlib
 import itertools
 import json
+import math
 from pathlib import Path
 import subprocess
 import sys
@@ -88,17 +89,46 @@ def build():
     package = ROOT / "felix"
     package.mkdir(exist_ok=True)
     atlas.save(package / "spritesheet.webp", lossless=True, exact=True)
-    (package / "pet.json").write_text(json.dumps({
+    working_row = next(i for i, row in enumerate(ROWS) if row[0] == "running")
+    working_durations = ROWS[working_row][4]
+    tick_ms = math.gcd(*working_durations)
+    manifest = {
         "id": "felix", "displayName": "Felix",
         "description": "The classic desktop cat, with his original animations.",
         "spritesheetPath": "spritesheet.webp",
-    }, indent=2) + "\n")
+        "animations": {"running": {
+            "frames": [working_row*8+column
+                       for column, duration in enumerate(working_durations)
+                       for _ in range(duration // tick_ms)],
+            "fps": 1000 / tick_ms,
+            "loop": True,
+        }},
+    }
+    (package / "pet.json").write_text(json.dumps(manifest, indent=2) + "\n")
+
+    # The CLI displays five terminal rows. Remove empty space inside each frame.
+    cli_package = ROOT / "felix-cli"
+    cli_package.mkdir(exist_ok=True)
+    cli_atlas = Image.new("RGBA", atlas.size)
+    for row, cells in enumerate(animations):
+        for column, cell in enumerate(cells):
+            bounds = cell.getbbox()
+            if bounds is None or bounds[1] < 46 or bounds[3] > 190:
+                raise ValueError(f"CLI crop would clip {ROWS[row][0]} frame {column}")
+            cli_atlas.alpha_composite(cell.crop((0, 46, 192, 190)),
+                                      (column*192, row*144))
+    cli_atlas.save(cli_package / "spritesheet.webp", lossless=True, exact=True)
+    cli_manifest = {**manifest, "id": "felix-cli", "displayName": "Felix CLI",
+                    "description": "Larger Felix for the Codex CLI.",
+                    "frame": {"width": 192, "height": 144, "columns": 8, "rows": 13}}
+    (cli_package / "pet.json").write_text(json.dumps(cli_manifest, indent=2) + "\n")
 
     qa = ROOT / "qa"
     qa.mkdir(exist_ok=True)
     subprocess.run([sys.executable, str(ROOT / "tools/validate_atlas.py"),
                     str(package / "spritesheet.webp"), "--json-out",
                     str(qa / "validation.json")], check=True)
+    subprocess.run([sys.executable, str(ROOT / "tools/check_cli_package.py")], check=True)
     contact = Image.new("RGB", (CELL[0]*8+140, CELL[1]*9), "#9297a1")
     contact.paste(atlas, (140, 0), atlas)
     draw = ImageDraw.Draw(contact)
@@ -122,26 +152,27 @@ def build():
 
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
-    archive_path = dist / "felix-codex-pet.zip"
-    files = {"felix/pet.json": package / "pet.json",
-             "felix/spritesheet.webp": package / "spritesheet.webp",
-             "felix/NOTICE.md": ROOT / "NOTICE.md"}
-    with ZipFile(archive_path, "w") as archive:
-        for name, source in files.items():
-            info = ZipInfo(name)  # Fixed timestamp makes repeated builds identical.
-            info.compress_type = ZIP_DEFLATED
-            info.external_attr = 0o100644 << 16
-            archive.writestr(info, source.read_bytes())
-    with ZipFile(archive_path) as archive:
-        assert archive.testzip() is None
-        assert set(archive.namelist()) == set(files)
-        for name, source in files.items():
-            assert archive.read(name) == source.read_bytes(), name
-    checksum = hashlib.sha256(archive_path.read_bytes()).hexdigest()
-    archive_path.with_suffix(".zip.sha256").write_text(
-        f"{checksum}  {archive_path.name}\n", encoding="ascii")
-    print(f"Built and validated {package}")
-    print(f"Packaged and checked {archive_path}")
+    for folder, filename in [(package, "felix-codex-pet.zip"),
+                             (cli_package, "felix-codex-cli-pet.zip")]:
+        archive_path = dist / filename
+        files = {f"{folder.name}/pet.json": folder / "pet.json",
+                 f"{folder.name}/spritesheet.webp": folder / "spritesheet.webp",
+                 f"{folder.name}/NOTICE.md": ROOT / "NOTICE.md"}
+        with ZipFile(archive_path, "w") as archive:
+            for name, source in files.items():
+                info = ZipInfo(name)  # Fixed timestamp makes repeated builds identical.
+                info.compress_type = ZIP_DEFLATED
+                info.external_attr = 0o100644 << 16
+                archive.writestr(info, source.read_bytes())
+        with ZipFile(archive_path) as archive:
+            assert archive.testzip() is None
+            assert set(archive.namelist()) == set(files)
+            for name, source in files.items():
+                assert archive.read(name) == source.read_bytes(), name
+        checksum = hashlib.sha256(archive_path.read_bytes()).hexdigest()
+        archive_path.with_suffix(".zip.sha256").write_text(
+            f"{checksum}  {archive_path.name}\n", encoding="ascii")
+        print(f"Packaged and checked {archive_path}")
 
 
 if __name__ == "__main__":

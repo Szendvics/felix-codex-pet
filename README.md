@@ -6,7 +6,7 @@ The classic desktop cat, with his original animations.
 
 ### Codex app
 
-1. Run the [download command](#download-commands) for your system.
+1. Run the [app download command](#app-download) for your system.
 2. Open **Settings → Pets**, click **Refresh**, and select **Felix**.
 3. Enter `/pet` to show him.
 
@@ -17,13 +17,14 @@ extract it, and copy the **felix** folder to **Settings → Pets → Open folder
 
 ### Codex CLI
 
-Run the [download command](#download-commands) where you run Codex. For a CLI
-installed in WSL, run it inside WSL.
+**Felix CLI** appears about 44% larger in the terminal, with the same animations.
+Run the [CLI download command](#cli-download) where you run Codex. For WSL, run it
+inside WSL.
 
 Start `codex`, then enter:
 
 ```text
-/pets Felix
+/pets felix-cli
 ```
 
 Terminal pets require iTerm2 3.6+ or a terminal with Kitty graphics or Sixel
@@ -34,7 +35,9 @@ support. They do not work inside tmux or Zellij.
 
 Run the same command to install or update Felix.
 
-### Windows PowerShell
+### App download
+
+**Windows PowerShell**
 
 ```powershell
 $petHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }
@@ -43,13 +46,29 @@ Invoke-WebRequest -Uri $url -OutFile felix-codex-pet.zip -UseBasicParsing -Error
 Expand-Archive -LiteralPath .\felix-codex-pet.zip -DestinationPath (Join-Path $petHome 'pets') -Force
 ```
 
-### macOS / Linux / WSL
-
-Requires `curl` and `unzip`.
+**macOS** (requires `curl` and `unzip`)
 
 ```sh
 curl -fL https://github.com/Szendvics/felix-codex-pet/releases/latest/download/felix-codex-pet.zip -o felix-codex-pet.zip &&
 unzip -o felix-codex-pet.zip -d "${CODEX_HOME:-$HOME/.codex}/pets"
+```
+
+### CLI download
+
+**macOS / Linux / WSL** (requires `curl` and `unzip`)
+
+```sh
+curl -fL https://github.com/Szendvics/felix-codex-pet/releases/latest/download/felix-codex-cli-pet.zip -o felix-codex-cli-pet.zip &&
+unzip -o felix-codex-cli-pet.zip -d "${CODEX_HOME:-$HOME/.codex}/pets"
+```
+
+**Windows PowerShell**
+
+```powershell
+$petHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }
+$url = 'https://github.com/Szendvics/felix-codex-pet/releases/latest/download/felix-codex-cli-pet.zip'
+Invoke-WebRequest -Uri $url -OutFile felix-codex-cli-pet.zip -UseBasicParsing -ErrorAction Stop
+Expand-Archive -LiteralPath .\felix-codex-cli-pet.zip -DestinationPath (Join-Path $petHome 'pets') -Force
 ```
 
 ## Animations
@@ -79,8 +98,9 @@ python3 -m venv .venv
 .venv/bin/python build.py
 ```
 
-Validates the spritesheet and creates `dist/felix-codex-pet.zip`, its SHA-256
-checksum, and the previews. Edit `ROWS` in [build.py](build.py) to change the frames.
+Creates both ZIPs in `dist/`, their SHA-256 checksums, and the previews. Checks the
+app atlas, CLI cropping, and Working loop timing.
+Edit `ROWS` in [build.py](build.py) to change the frames.
 On Windows, use `python` to create the venv and `.venv\Scripts\python.exe` after that.
 
 ## Original Felix artwork
