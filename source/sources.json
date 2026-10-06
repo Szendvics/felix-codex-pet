@@ -1,5 +1,15 @@
 [
   {
+    "path": "source/fig_1200.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_1200_sheet.png",
+    "sha256": "aaaaa4f5d24b8168329a4517cd4d72be43c4cf8108f692a514cc7a2382e1ad5d"
+  },
+  {
+    "path": "source/fig_301.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_301_sheet.png",
+    "sha256": "b94cdc4d65101333570e5b01839d9693b285d1c7ee2ce2f9b3c2125c741a3521"
+  },
+  {
     "path": "source/fig_302.png",
     "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_302_sheet.png",
     "sha256": "06c90516d335052f456ac3bf74b051461d0f5a7709bb9e2addec318914ea0657"
@@ -10,9 +20,79 @@
     "sha256": "befc5079adb5fee0c5db66f6199e48c6b1a4dd87419bc3b7fd2cc22b4e354841"
   },
   {
+    "path": "source/fig_304.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_304_sheet.png",
+    "sha256": "29bf66d0e0a135573cc82d9cefd694c80b9fafa37dd2d522e178784c21bb88f6"
+  },
+  {
+    "path": "source/fig_305.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_305_sheet.png",
+    "sha256": "30531f68a16d113575f52bbba5156bf01c4c7652ac159d310925ca4d053ad1f1"
+  },
+  {
+    "path": "source/fig_306.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_306_sheet.png",
+    "sha256": "5d3ba46fa101d22c69efc5cea3820fc82ab57ddf7031f682c0522cca55177f01"
+  },
+  {
     "path": "source/fig_307.png",
     "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_307_sheet.png",
     "sha256": "e0ae8e4767aa2be7e143936a6eb26f7112ed9cdad9844b833195c3eda80e9d71"
+  },
+  {
+    "path": "source/fig_308.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_308_sheet.png",
+    "sha256": "c743c46268114c4a5bbd3c2a110529f9e38ab0e359ce7104f6a8260ea34b9864"
+  },
+  {
+    "path": "source/fig_309.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_309_sheet.png",
+    "sha256": "035bbd9a06751f1dd8a371d9818715ea02964828f98a1de95a5679bdbf6c5554"
+  },
+  {
+    "path": "source/fig_310.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_310_sheet.png",
+    "sha256": "8e522f6fce6ea053cb87d5b5ee94806274ace4ebedf45b1a19595f59c43e7d2d"
+  },
+  {
+    "path": "source/fig_311.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_311_sheet.png",
+    "sha256": "fd8ecc1537a17d08b2a35602c673971f1a334612f154735a2adacefdc52bc740"
+  },
+  {
+    "path": "source/fig_312.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_312_sheet.png",
+    "sha256": "f9aaf0c44e0af9e5c784ad11d5990e32b086c903d5cbe432459f5237ddf30748"
+  },
+  {
+    "path": "source/fig_313.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_313_sheet.png",
+    "sha256": "63782d5c080ec9db60b29a33062a4919c09c44e29347c112c763615c6d2a606c"
+  },
+  {
+    "path": "source/fig_314.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_314_sheet.png",
+    "sha256": "5f91cd114d862c2bb64d7642789c8f9eaed5ecf00f750e7525f859c72c72ff81"
+  },
+  {
+    "path": "source/fig_315.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_315_sheet.png",
+    "sha256": "18226c3d5faf312df0a26d17ecf91915670e016457781e694a6be5a7eed3964a"
+  },
+  {
+    "path": "source/fig_316.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_316_sheet.png",
+    "sha256": "7f4a9191f63c78c10090fbdcd9055039a2693b923dbd6d5691d25f7299e1aca3"
+  },
+  {
+    "path": "source/fig_317.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_317_sheet.png",
+    "sha256": "23a50e216cd3dbd2f19c8b015098d4a7ed40c7775158cf33fc35e5585b952bf1"
+  },
+  {
+    "path": "source/fig_318.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_318_sheet.png",
+    "sha256": "5d8991228e01bc2b50202e703520836dbc11c71e432cded9678a7223b0d8b865"
   },
   {
     "path": "source/fig_319.png",
@@ -30,6 +110,16 @@
     "sha256": "98f06269057e0ee123f367336e6d09d21cf1f4b1cdf99854935e1ad389d69351"
   },
   {
+    "path": "source/fig_322.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_322_sheet.png",
+    "sha256": "0fdee5e497671ec098035f80d41be20eda414343e21d05f0eb471153c618854f"
+  },
+  {
+    "path": "source/fig_323.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_323_sheet.png",
+    "sha256": "0d8e3e452042c115c7471c627e76c51fb706929a61435b7526bb325fcd998191"
+  },
+  {
     "path": "source/fig_324.png",
     "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_324_sheet.png",
     "sha256": "b12b565e5de74fb2c1314a80389d89e233641d6005aa28b87721b79b35b7dabe"
@@ -40,13 +130,28 @@
     "sha256": "4487b591e1977791ff69331350fb30fa2f6de68f2066776a420b1e6d768d1357"
   },
   {
-    "path": "tools/validate_atlas.py",
-    "url": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/hatch-pet/scripts/validate_atlas.py",
-    "sha256": "649a9a242d171da032de0cab1744f11629db3a2c88253fd3215e1a1174c29465"
+    "path": "source/fig_326.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_326_sheet.png",
+    "sha256": "9beb19aaeed174d7e987f8cb50072b5551019d7b1aaafab5c371396b6f607406"
+  },
+  {
+    "path": "source/fig_327.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_327_sheet.png",
+    "sha256": "938d0198beab8b5649b5b30251b11ef239fae25c1e95070061d4c3488f1d4bca"
+  },
+  {
+    "path": "source/fig_328.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_328_sheet.png",
+    "sha256": "78ad2bedb956c4e74ba40988cfceab2aa47f506457722b7d105c85408078bc7e"
   },
   {
     "path": "tools/LICENSE.openai-skills.txt",
     "url": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/hatch-pet/LICENSE.txt",
     "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9"
+  },
+  {
+    "path": "tools/validate_atlas.py",
+    "url": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/hatch-pet/scripts/validate_atlas.py",
+    "sha256": "649a9a242d171da032de0cab1744f11629db3a2c88253fd3215e1a1174c29465"
   }
 ]

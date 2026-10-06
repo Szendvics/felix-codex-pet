@@ -3,6 +3,9 @@
 The classic black-and-white desktop cat, repackaged as a Codex pet using his
 original animation frames. All nine Codex states are included.
 
+[Browse all 29 GIFs and choose the Codex state mapping](animations/README.md).
+The gallery includes numbered source frames and a selection template in Hungarian.
+
 ![Felix animation preview](preview.gif)
 
 ## Install

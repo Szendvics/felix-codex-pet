@@ -12,6 +12,11 @@ This adaptation selects, scales, positions, and retimes existing frames for the
 Codex atlas. The jump includes additional vertical movement. No legacy executable
 is included or run. Source URLs and SHA-256 hashes are in `source/sources.json`.
 
+The `animations` gallery exports all 29 archived sheets for manual selection,
+including props, sparse effects, and the static splash image. Its GIFs use a
+neutral background, 2x nearest-neighbor scaling, and uniform 120 ms preview
+timing. They show sheet order, not recovered executable playback instructions.
+
 The archive does not provide an artwork redistribution license. The original
 character and artwork remain the property of their respective owners. This
 private, unofficial adaptation does not claim ownership of or grant a new license
