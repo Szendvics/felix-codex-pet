@@ -2,24 +2,19 @@
 
 ## Felix artwork
 
-Original animation sheets come from the archived Felix.exe desktop companion,
-preserved and extracted by [chevp/kitty-on-screen](https://github.com/chevp/kitty-on-screen)
+The Felix.exe animation sheets are from
+[chevp/kitty-on-screen](https://github.com/chevp/kitty-on-screen)
 at commit `912cb839d4806dcd0f5b95f9317b6cf414fbfd65`.
-That archive credits the original Screen Mates work to codehammer.com and
-adtoolsinc.com and states that its maintainer is not the original creator.
+The archive credits codehammer.com and adtoolsinc.com for the original Screen
+Mates artwork. Its maintainer is not the original creator.
 
-This adaptation selects, scales, positions, and retimes existing frames for the
-Codex atlas. No legacy executable
-is included or run. Source URLs and SHA-256 hashes are in `source/sources.json`.
-
-The `animations` gallery exports all 29 archived sheets for manual selection,
-including props, sparse effects, and the static splash image. Its GIFs use a
-neutral background, 2x nearest-neighbor scaling, and uniform 120 ms preview
-timing. They show sheet order, not recovered executable playback instructions.
+Frames are selected, resized, and retimed for Codex. No Felix.exe binary is
+included. Source URLs and SHA-256 hashes are in `source/sources.json`.
+Gallery previews use 120 ms per source frame.
 
 The archive does not provide an artwork redistribution license. The original
 character and artwork remain the property of their respective owners. This
-private, unofficial adaptation does not claim ownership of or grant a new license
+unofficial adaptation does not claim ownership of or grant a new license
 to that artwork, and is not endorsed by its owners or OpenAI.
 
 ## Atlas validator

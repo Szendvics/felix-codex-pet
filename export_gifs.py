@@ -18,32 +18,32 @@ SHEETS = [
     (301, 1, 4, 4, "Landing and standing up"),
     (302, 2, 6, 12, "Walking left"),
     (303, 2, 6, 12, "Walking right"),
-    (304, 2, 1, 2, "Turning from front to right"),
-    (305, 2, 1, 2, "Turning from front to left"),
+    (304, 2, 1, 2, "Turning right"),
+    (305, 2, 1, 2, "Turning left"),
     (306, 2, 6, 12, "Sitting down, looking around, standing up"),
-    (307, 2, 2, 4, "Seated poses facing sideways"),
+    (307, 2, 2, 4, "Sitting sideways"),
     (308, 4, 2, 8, "Peeking up from below"),
     (309, 4, 2, 8, "Peeking in from the side"),
-    (310, 1, 5, 5, "Disappearing below the bottom edge"),
+    (310, 1, 5, 5, "Disappearing below the screen"),
     (311, 6, 4, 24, "Eating from the bowl"),
-    (312, 2, 17, 34, "Fish, variant A (separate prop)"),
-    (313, 2, 11, 22, "Fish, variant B (separate prop)"),
-    (314, 2, 4, 8, "Fish, variant C (separate prop)"),
+    (312, 2, 17, 34, "Fish A"),
+    (313, 2, 11, 22, "Fish B"),
+    (314, 2, 4, 8, "Fish C"),
     (315, 6, 4, 24, "Cat with a fish bowl"),
     (316, 4, 7, 26, "Going through the cat flap"),
-    (317, 4, 1, 4, "Small head and eyes at the edge (partial sprite)"),
+    (317, 4, 1, 4, "Head at the screen edge"),
     (318, 4, 6, 23, "Coming out of the cat flap"),
-    (319, 3, 3, 9, "Jumping and leaving paw prints on the glass"),
-    (320, 4, 3, 12, "Sitting down and turning the head"),
+    (319, 3, 3, 9, "Jumping, paw prints on the glass"),
+    (320, 4, 3, 12, "Sitting and turning his head"),
     (321, 4, 8, 32, "Crouching with ears back and moving the tail"),
     (322, 2, 6, 12, "Turning away, sitting down, moving the tail"),
     (323, 3, 4, 12, "Watching TV"),
     (324, 4, 5, 20, "Grooming and licking a paw"),
-    (325, 4, 5, 18, "Sitting facing forward and raising a paw"),
-    (326, 4, 8, 32, "Moving dots (no complete cat in the archive)"),
-    (327, 3, 5, 13, "Moving dots (no complete cat in the archive)"),
-    (328, 7, 2, 14, "Moving dots (no complete cat in the archive)"),
-    (1200, 1, 1, 1, "Splash screen and logo (still image)"),
+    (325, 4, 5, 18, "Sitting and raising a paw"),
+    (326, 4, 8, 32, "Moving dots A"),
+    (327, 3, 5, 13, "Moving dots B"),
+    (328, 7, 2, 14, "Moving dots C"),
+    (1200, 1, 1, 1, "Splash screen and logo"),
 ]
 
 
@@ -91,8 +91,8 @@ def export():
     table = [marker, "", "| ID · sequence | Frames | GIF |",
              "| --- | --- | --- |"]
     for ident, _, _, count, title in SHEETS:
-        table.append(f"| **{ident}** · {title} | [{count} total, 0–{count-1}](fig_{ident}.frames.png) "
-                     f"| ![{ident} — {title}](fig_{ident}.gif) |")
+        table.append(f"| **{ident}** · {title} | [{count} (0–{count-1})](fig_{ident}.frames.png) "
+                     f"| ![{ident}: {title}](fig_{ident}.gif) |")
     readme.write_text(guide + "\n".join(table) + "\n")
     print(f"Exported and checked {len(SHEETS)} GIFs and numbered frame sheets in {OUT}")
 
