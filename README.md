@@ -33,16 +33,15 @@ displays the pet. The Windows app and WSL CLI can have separate Codex homes.
 | Jumping | Crouching, leaping, and landing |
 | Failed | Sitting with his back turned and moving his tail (322) |
 | Waiting for input | Looking at you and moving his tail |
-| Working | Busy washing his face |
+| Working | Eating from his bowl (311) |
 | Review | Inspecting the fish bowl (315) |
 
 This package uses the v1 atlas: 8 × 9 cells of 192 × 208 pixels, with transparent
 unused cells. The app controls the pet's activity; the original desktop program's
 window detection and roaming behavior are not part of the package.
 
-Working currently keeps the original face-washing loop (324). Codex desktop
-26.930.4958.0 uses one fixed six-frame Working row; custom pet packages cannot
-choose a different Working animation on each turn.
+Codex desktop 26.930.4958.0 uses one fixed six-frame Working row; custom pet
+packages cannot choose a different Working animation on each turn.
 
 ## Rebuild and check
 

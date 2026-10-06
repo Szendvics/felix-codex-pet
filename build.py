@@ -16,8 +16,8 @@ CELL = (192, 208)
 SCALE = 1.5
 GROUND = 190
 # Original sheets have different cell sizes. Keep one scale for every pose.
-GRIDS = {302: (2, 6), 303: (2, 6), 315: (6, 4), 319: (3, 3),
-         322: (2, 6), 324: (4, 5), 325: (4, 5)}
+GRIDS = {302: (2, 6), 303: (2, 6), 311: (6, 4), 315: (6, 4),
+         319: (3, 3), 322: (2, 6), 325: (4, 5)}
 # State, source sheet, source frames, vertical offsets, Codex frame durations.
 # The archive reverses 302/303's direction labels; the pixels face left/right.
 ROWS = [
@@ -28,7 +28,7 @@ ROWS = [
     ("jumping", 319, [2, 3, 4, 3, 0], [0, -16, -32, -16, 0], [140]*4+[280]),
     ("failed", 322, [0, 1, 2, 4, 6, 8, 10, 11], [0]*8, [140]*7+[240]),
     ("waiting", 325, [2, 3, 4, 5, 6, 3], [0]*6, [150]*5+[260]),
-    ("running", 324, [6, 7, 8, 9, 10, 7], [0]*6, [120]*5+[220]),
+    ("running", 311, [14, 15, 16, 17, 16, 15], [0]*6, [120]*5+[220]),
     ("review", 315, [4, 6, 8, 12, 19, 21], [0]*6, [150]*5+[280]),
 ]
 LABELS = ["Idle", "Drag right", "Drag left", "Wave", "Jump", "Failed",
