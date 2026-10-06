@@ -9,7 +9,7 @@ That archive credits the original Screen Mates work to codehammer.com and
 adtoolsinc.com and states that its maintainer is not the original creator.
 
 This adaptation selects, scales, positions, and retimes existing frames for the
-Codex atlas. The jump includes additional vertical movement. No legacy executable
+Codex atlas. No legacy executable
 is included or run. Source URLs and SHA-256 hashes are in `source/sources.json`.
 
 The `animations` gallery exports all 29 archived sheets for manual selection,

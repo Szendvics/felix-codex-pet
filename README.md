@@ -30,7 +30,7 @@ displays the pet. The Windows app and WSL CLI can have separate Codex homes.
 | Idle | Same seated poses as Waiting for input (325), with Codex's idle timing |
 | Drag right / left | Walking in the matching direction |
 | Waving | Raising a paw |
-| Jumping | Crouching, leaping, and landing |
+| Jumping | Jumping and leaving paw prints on the glass (319) |
 | Failed | Sitting with his back turned and moving his tail (322) |
 | Waiting for input | Looking at you and moving his tail |
 | Working | Eating from his bowl (311) |
