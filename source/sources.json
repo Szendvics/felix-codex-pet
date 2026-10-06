@@ -1,0 +1,52 @@
+[
+  {
+    "path": "source/fig_302.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_302_sheet.png",
+    "sha256": "06c90516d335052f456ac3bf74b051461d0f5a7709bb9e2addec318914ea0657"
+  },
+  {
+    "path": "source/fig_303.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_303_sheet.png",
+    "sha256": "befc5079adb5fee0c5db66f6199e48c6b1a4dd87419bc3b7fd2cc22b4e354841"
+  },
+  {
+    "path": "source/fig_307.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_307_sheet.png",
+    "sha256": "e0ae8e4767aa2be7e143936a6eb26f7112ed9cdad9844b833195c3eda80e9d71"
+  },
+  {
+    "path": "source/fig_319.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_319_sheet.png",
+    "sha256": "fc307909710a14cdb234933813c6b3627e02323d69ce394ed754f2b8dbcb9298"
+  },
+  {
+    "path": "source/fig_320.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_320_sheet.png",
+    "sha256": "51c8a40daf436721ce8b40ed61176b6d83ee6c3a1965262dc455b6b0d135789f"
+  },
+  {
+    "path": "source/fig_321.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_321_sheet.png",
+    "sha256": "98f06269057e0ee123f367336e6d09d21cf1f4b1cdf99854935e1ad389d69351"
+  },
+  {
+    "path": "source/fig_324.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_324_sheet.png",
+    "sha256": "b12b565e5de74fb2c1314a80389d89e233641d6005aa28b87721b79b35b7dabe"
+  },
+  {
+    "path": "source/fig_325.png",
+    "url": "https://raw.githubusercontent.com/chevp/kitty-on-screen/912cb839d4806dcd0f5b95f9317b6cf414fbfd65/assets/sheets/fig_325_sheet.png",
+    "sha256": "4487b591e1977791ff69331350fb30fa2f6de68f2066776a420b1e6d768d1357"
+  },
+  {
+    "path": "tools/validate_atlas.py",
+    "url": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/hatch-pet/scripts/validate_atlas.py",
+    "sha256": "649a9a242d171da032de0cab1744f11629db3a2c88253fd3215e1a1174c29465"
+  },
+  {
+    "path": "tools/LICENSE.openai-skills.txt",
+    "url": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/hatch-pet/LICENSE.txt",
+    "sha256": "4dd13869245e356246a5b770723247bbb80a8f07a181d1d3d873a1734297cdb9"
+  }
+]
